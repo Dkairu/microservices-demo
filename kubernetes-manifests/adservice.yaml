@@ -31,7 +31,7 @@ spec:
       terminationGracePeriodSeconds: 5
       containers:
       - name: adservice
-        image: pmarelas288/adservice
+        image: dontke/adservice
         env:
         - name: NEW_RELIC_LICENSE_KEY
           valueFrom:

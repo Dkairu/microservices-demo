@@ -31,7 +31,7 @@ spec:
       terminationGracePeriodSeconds: 5
       containers:
       - name: emailservice
-        image: pmarelas288/emailservice
+        image: dontke/emailservice
         ports:
         - containerPort: 8080
         env:

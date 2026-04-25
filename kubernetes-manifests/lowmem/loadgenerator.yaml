@@ -67,7 +67,7 @@ spec:
               - all
           privileged: false
           readOnlyRootFilesystem: true
-        image: pmarelas288/loadgenerator
+        image: dontke/loadgenerator
         env:
         - name: FRONTEND_ADDR
           value: "frontend:8081"

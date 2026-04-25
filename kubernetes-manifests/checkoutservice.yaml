@@ -30,7 +30,7 @@ spec:
       serviceAccountName: default
       containers:
         - name: checkoutservice
-          image: pmarelas288/checkoutservice
+          image: dontke/checkoutservice
           ports:
           - containerPort: 5050
           env:

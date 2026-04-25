@@ -31,7 +31,7 @@ spec:
       terminationGracePeriodSeconds: 5
       containers:
       - name: recommendationservice
-        image: pmarelas288/recommendationservice
+        image: dontke/recommendationservice
         ports:
         - containerPort: 8080
         env:

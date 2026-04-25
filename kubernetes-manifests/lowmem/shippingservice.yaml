@@ -30,7 +30,7 @@ spec:
       serviceAccountName: default
       containers:
       - name: shippingservice
-        image: pmarelas288/shippingservice
+        image: dontke/shippingservice
         ports:
         - containerPort: 50051
         env:

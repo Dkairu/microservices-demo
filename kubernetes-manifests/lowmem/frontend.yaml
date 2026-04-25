@@ -30,7 +30,7 @@ spec:
       serviceAccountName: default
       containers:
         - name: frontend
-          image: pmarelas288/frontend
+          image: dontke/frontend
           ports:
           - containerPort: 8080
           startupProbe:

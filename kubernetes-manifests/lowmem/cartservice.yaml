@@ -31,7 +31,7 @@ spec:
       terminationGracePeriodSeconds: 5
       containers:
       - name: cartservice
-        image: pmarelas288/cartservice
+        image: dontke/cartservice
         ports:
         - containerPort: 7070
         env:
