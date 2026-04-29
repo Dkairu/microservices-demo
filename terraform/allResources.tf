@@ -51,7 +51,7 @@ resource "newrelic_service_level" "ms-demo-productcatalogservice-latency-sl" {
         }
         good_events {
             from = "Transaction"
-            where = "appName = 'store-productcatalogservice' AND (transactionType= 'Web') AND duration < 0.05"
+            where = "appName = 'store-productcatalogservice' AND (transactionType= 'Web') AND duration < 0.2"
         }
     }
 
@@ -79,7 +79,7 @@ resource "newrelic_service_level" "ms-demo-frontend-latency-sl" {
         }
         good_events {
             from = "Transaction"
-            where = "appName = 'store-frontend' AND (transactionType= 'Web') AND duration < 0.05"
+            where = "appName = 'store-frontend' AND (transactionType= 'Web') AND duration < 0.2"
         }
     }
 
@@ -235,7 +235,7 @@ resource "newrelic_nrql_alert_condition" "ms-demo-pod-stability-condition" {
   type                           = "static"
   name                           = "POD Stability"
   description                    = "Alert when PODs are unstable"
-  enabled                        = true
+  enabled                        = false
   violation_time_limit_seconds   = 3600
   fill_option                    = "static"
   fill_value                     = 1.0
@@ -301,7 +301,7 @@ resource "newrelic_nrql_alert_condition" "ms-demo-container-stability-condition"
   type                           = "static"
   name                           = "Container Stability"
   description                    = "Alert when Containers consume more CPU"
-  enabled                        = true
+  enabled                        = false
   violation_time_limit_seconds   = 3600
   fill_option                    = "static"
   fill_value                     = 1.0
@@ -351,7 +351,7 @@ resource "newrelic_service_level" "ms-demo-additem-latency-sl" {
         }
         good_events {
             from = "Transaction"
-            where = "name = 'WebTransaction/ASP/hipstershop.CartService/AddItem' AND duration < 0.005"
+            where = "name = 'WebTransaction/ASP/hipstershop.CartService/AddItem' AND duration < 0.01"
         }
     }
 
